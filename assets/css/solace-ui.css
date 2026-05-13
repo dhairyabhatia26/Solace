@@ -1,0 +1,265 @@
+/* assets/css/solace-ui.css */
+/* FAANG-level Design System for Solace Student Wellness */
+
+:root {
+    --solace-primary: #2E7D5B;
+    --solace-primary-light: #49A880;
+    --solace-primary-dark: #1F523B;
+    --solace-bg-soft: #F3FAF6;
+    --solace-white: #FFFFFF;
+    --solace-text-main: #1F2933;
+    --solace-text-muted: #6B7280;
+    --solace-border: #E5E7EB;
+    --solace-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --solace-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --solace-radius: 12px;
+    --solace-radius-lg: 20px;
+}
+
+/* Page Shell & Typography */
+body {
+    background-color: var(--solace-bg-soft);
+    color: var(--solace-text-main);
+    font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.page-title {
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--solace-primary-dark);
+}
+
+.page-subtitle {
+    color: var(--solace-text-muted);
+    font-size: 1.1rem;
+}
+
+/* Modern Navbar */
+.navbar {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--solace-border);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--solace-primary) !important;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--solace-text-main) !important;
+    transition: all 0.2s;
+}
+
+.nav-link:hover, .nav-item.active .nav-link {
+    color: var(--solace-primary) !important;
+    background: var(--solace-bg-soft);
+}
+
+/* Resource Library Hero */
+.resources-hero {
+    background: linear-gradient(135deg, #2E7D5B 0%, #49A880 100%);
+    padding: 5rem 2rem;
+    border-radius: var(--solace-radius-lg);
+    margin-bottom: 3rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.resources-hero::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+}
+
+.resources-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.resources-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Modern Search & Filters */
+.filter-card {
+    background: var(--solace-white);
+    border-radius: var(--solace-radius);
+    border: none;
+    box-shadow: var(--solace-shadow);
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.form-control-lg {
+    border-radius: 10px;
+    border: 1px solid var(--solace-border);
+    padding: 0.75rem 1.25rem;
+}
+
+.form-control-lg:focus {
+    box-shadow: 0 0 0 4px rgba(46, 125, 91, 0.1);
+    border-color: var(--solace-primary);
+}
+
+/* Resource Cards */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card {
+    background: var(--solace-white);
+    border-radius: var(--solace-radius);
+    border: 1px solid var(--solace-border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.resource-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--solace-shadow-lg);
+    border-color: var(--solace-primary-light);
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.tag-stress { background: #FEF3C7; color: #92400E; }
+.tag-anxiety { background: #E0E7FF; color: #3730A3; }
+.tag-wellbeing { background: #D1FAE5; color: #065F46; }
+
+.resource-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.resource-desc {
+    color: var(--solace-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.resource-footer {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--solace-border);
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-solace {
+    background: var(--solace-primary);
+    color: white;
+    font-weight: 700;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-solace:hover {
+    background: var(--solace-primary-dark);
+    transform: translateY(-1px);
+    color: white;
+}
+
+.btn-solace-outline {
+    background: transparent;
+    border: 2px solid var(--solace-primary);
+    color: var(--solace-primary);
+    font-weight: 700;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.btn-solace-outline:hover {
+    background: var(--solace-bg-soft);
+    border-color: var(--solace-primary-dark);
+    color: var(--solace-primary-dark);
+}
+
+/* Empty States */
+.empty-state {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.empty-state-icon {
+    font-size: 4rem;
+    color: var(--solace-border);
+    margin-bottom: 1.5rem;
+}
+
+/* Dashboard Polish */
+.stat-card {
+    background: white;
+    border-radius: var(--solace-radius);
+    padding: 2rem;
+    box-shadow: var(--solace-shadow);
+    border: 1px solid var(--solace-border);
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--solace-primary);
+}
+
+.stat-label {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--solace-text-muted);
+    font-size: 0.8rem;
+}
+
+/* Footer Polish */
+footer {
+    background: var(--solace-white);
+    border-top: 1px solid var(--solace-border);
+    padding: 3rem 0;
+    margin-top: 5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}

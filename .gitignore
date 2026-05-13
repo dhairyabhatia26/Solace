@@ -1,0 +1,36 @@
+# Local config / secrets
+config/gemini_config.php
+config/db.php
+config.php
+.env
+
+# Logs/temp
+*.log
+logs/
+tmp/
+temp/
+
+# Debug/test files
+test_*.php
+debug_*.php
+debug_runtime_check.php
+list_gemini_models.php
+test_gemini.php
+test_gemini_models.php
+
+# Cleanup/archive folders
+_archive_cleanup/
+_legacy_routes/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Keep project database setup files, but avoid random SQL dumps outside database/
+*.sql
+!database/**/*.sql
+
+# Track PDFs explicitly
+!assets/resources/pdfs/**/*.pdf
