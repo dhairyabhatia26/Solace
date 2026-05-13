@@ -2,7 +2,7 @@
 
 Solace is a PHP/MySQL-based institutional wellness platform designed to centralize and secure student support workflows. It bridges the gap between informal communication and professional intervention by providing role-based dashboards, AI-assisted analysis, and leadership analytics.
 
-## 🚀 Key Features
+## 🔑 Key Features
 
 - **Role-Based Access**: Specialized interfaces for Students, Counselors, and Institutional Administrators.
 - **Secure Case Submission**: Structured forms for students to report concerns with optional self-assessment metrics (stress, sleep, academic pressure).
